@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/main_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_layout" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RadioGroup
+            android:id="@+id/main_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abs__ab_bottom_transparent_light_holo"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_message"
+                android:gravity="center"
+                android:text="@string/main_message_txt" />
+
+            <RadioButton
+                android:id="@+id/radio_contacts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_college"
+                android:gravity="center"
+                android:checked="true"
+                android:text="@string/main_contacts_txt" />
+
+            <RadioButton
+                android:id="@+id/radio_discover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableTop="@drawable/btn_discover"
+                android:gravity="center"
+                android:text="@string/main_discover_txt" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/msgnum"
+            android:layout_width="@dimen/main_msgnum_width"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/main_msgnum_marginLeft"
+            android:background="@drawable/roundtext"
+            android:visibility="gone"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/main_msgnum_txtsize" />
+    </FrameLayout>
+
+</RelativeLayout>

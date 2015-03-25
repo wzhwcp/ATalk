@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" xmlns:app="http://schemas.android.com/apk/res/com.myq.atalk">
+
+    <com.myq.atalk.bean.CircleImageView
+        android:id="@+id/login_headview"
+        android:layout_width="@dimen/login_avatar_width"
+        android:layout_height="@dimen/login_avatar_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_avatar_marginTop"
+        app:border_width="@dimen/login_avatar_border_width"
+        app:border_color="#81BFEF"
+        android:src="@drawable/head" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_headview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_layout_marginTop"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/login_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_username_hint"
+            android:textColor="#000000" >
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_password_hint"
+            android:textColor="#000000"
+            android:inputType="textPassword" />
+		<requestFocus />
+    </LinearLayout>
+
+     <Button
+        android:id="@+id/login_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_btn_marginTop"
+        android:background="@drawable/login_btn"
+        android:textColor="#FFFFFF"
+        android:text="@string/login_btn_txt" />
+    <TextView
+        android:id="@+id/login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#3292DC"
+        android:text="@string/login_register_txt" />
+
+   
+
+</RelativeLayout>
